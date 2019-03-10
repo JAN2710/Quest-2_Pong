@@ -5,7 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/_JS/Sences/Menu.unity
+    guid: 966269ccbb4bf32449955a4bd815d159
+  - enabled: 1
+    path: Assets/_JS/Sences/Game.unity
+    guid: 31dee9821e0b9d54289a1b7f967209b6
+  - enabled: 1
+    path: Assets/_JS/Sences/Player_1_Wins.unity
+    guid: a422376518bcb8f4b9bccaee9e157362
+  - enabled: 1
+    path: Assets/_JS/Sences/Player_2_Wins.unity
+    guid: 564f88cbaa471f14e800aecc413ee2e8
   m_configObjects: {}

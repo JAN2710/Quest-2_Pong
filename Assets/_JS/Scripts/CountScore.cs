@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class CountScore : MonoBehaviour
 {
@@ -21,14 +22,24 @@ public class CountScore : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (ball.transform.position.x >= 13f)
+        if (ball.transform.position.x >= 17f)
         {
             Bat_1_Score ++;
         }
 
-        if (ball.transform.position.x <= -13f)
+        if (ball.transform.position.x <= -17f)
         {
             Bat_2_Score ++;
+        }
+
+        if (Bat_1_Score >= 7)
+        {
+            SceneManager.LoadScene (2);
+        }
+
+        if (Bat_2_Score >= 7)
+        {
+            SceneManager.LoadScene (3);
         }
 
         Scoreboard.text = Bat_1_Score.ToString() + " - " + Bat_2_Score.ToString() ;
