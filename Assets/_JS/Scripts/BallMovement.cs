@@ -28,11 +28,13 @@ public class BallMovement : MonoBehaviour
         if (this.transform.position.x >= 17f)
         {
             this.transform.position = new Vector3(0f, 0f, 0f);
+            StartCoroutine(Pause());
         }
 
         if (this.transform.position.x <= -17f)
         {
             this.transform.position = new Vector3(0f, 0f, 0f);
+            StartCoroutine(Pause());
         }
 
     }
