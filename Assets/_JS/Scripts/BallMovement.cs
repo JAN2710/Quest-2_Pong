@@ -11,6 +11,7 @@ public class BallMovement : MonoBehaviour
     public GameObject Bat2;
     public float speed_1 = 10f;
     public float speed_2 = 10f;
+    public float acceleration = 2f;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,12 +30,14 @@ public class BallMovement : MonoBehaviour
         {
             this.transform.position = new Vector3(0f, 0f, 0f);
             StartCoroutine(Pause());
+            acceleration = 1f;
         }
 
         if (this.transform.position.x <= -17f)
         {
             this.transform.position = new Vector3(0f, 0f, 0f);
             StartCoroutine(Pause());
+            acceleration = 1f;
         }
 
     }
@@ -58,34 +61,39 @@ public class BallMovement : MonoBehaviour
     {
         if(hit.gameObject.name == "Bat_1")
         {
-           if(Bat1.GetComponent<Rigidbody2D> ().velocity.y > 0.5f)
+            if (Bat1.GetComponent<Rigidbody2D>().velocity.y > 0.5f)
             {
-                rb.velocity = new Vector2(speed_1, 10f);
+                rb.velocity = new Vector2(speed_1 * acceleration, 15f);
+
             }
             else if (Bat1.GetComponent<Rigidbody2D>().velocity.y < -0.5f)
             {
-                rb.velocity = new Vector2(speed_1, -10f );
+                rb.velocity = new Vector2(speed_1 * acceleration, -15f);
             }
-           else
+            else 
             {
-                rb.velocity = new Vector2(speed_2, 0f );
+                rb.velocity = new Vector2(speed_2 * acceleration, 0f );
             }
+            acceleration += 0.2f;
+
         }
 
         if (hit.gameObject.name == "Bat_2")
         {
             if (Bat2.GetComponent<Rigidbody2D>().velocity.y > 0.5f)
             {
-                rb.velocity = new Vector2(-speed_1, 10f);
+                rb.velocity = new Vector2(-speed_1 * acceleration, 15f);
             }
             else if (Bat2.GetComponent<Rigidbody2D>().velocity.y < -0.5f)
             {
-                rb.velocity = new Vector2(-speed_1, -10f);
+                rb.velocity = new Vector2(-speed_1 * acceleration, -15f);
             }
-            else
+            else 
             {
-                rb.velocity = new Vector2(-speed_2, 0f);
+                rb.velocity = new Vector2(-speed_2 * acceleration, 0f);
             }
+            acceleration += 0.2f;
         }
+
     }
 }
