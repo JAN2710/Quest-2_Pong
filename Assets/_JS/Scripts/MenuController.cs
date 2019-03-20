@@ -9,6 +9,8 @@ public class MenuController : MonoBehaviour
     public Button Quit_Button;
     public Button Reset_Button;
     public Button Exit_Button;
+    public Button Option_Button;
+
 
 
     public void Play_Game () 
@@ -29,6 +31,11 @@ public class MenuController : MonoBehaviour
     public void Exit_Game()
     {
         SceneManager.LoadScene(0);
+    }
+
+    public void Option_Game()
+    {
+        SceneManager.LoadScene(4);
     }
 
 }

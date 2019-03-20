@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_JS/Sences/Player_2_Wins.unity
     guid: 564f88cbaa471f14e800aecc413ee2e8
+  - enabled: 1
+    path: Assets/_JS/Sences/Option.unity
+    guid: e93d00474116c37428f3512b95c6f4bc
   m_configObjects: {}
