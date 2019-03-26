@@ -203,12 +203,12 @@ GameObject:
   - component: {fileID: 198140359}
   - component: {fileID: 198140358}
   m_Layer: 8
-  m_Name: GameObject
+  m_Name: Bloom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &198140358
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -513,6 +513,7 @@ MonoBehaviour:
   Quit_Button: {fileID: 1350784634}
   Reset_Button: {fileID: 0}
   Exit_Button: {fileID: 0}
+  Option_Button: {fileID: 0}
 --- !u!114 &664349927
 MonoBehaviour:
   m_ObjectHideFlags: 0

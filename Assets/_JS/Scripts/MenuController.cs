@@ -37,5 +37,14 @@ public class MenuController : MonoBehaviour
     {
         SceneManager.LoadScene(4);
     }
+     
+    public void Bloom_Off()
+    {
+        //GameObject.Bloom = false;
+
+        PlayerPrefs.SetInt("Bloom",0); 
+    }
+    
+    
 
 }
