@@ -32,12 +32,12 @@ public class CountScore : MonoBehaviour
             Bat_2_Score ++;
         }
 
-        if (Bat_1_Score >= 3)
+        if (Bat_1_Score >= 7)
         {
             SceneManager.LoadScene (2);
         }
 
-        if (Bat_2_Score >= 3)
+        if (Bat_2_Score >= 7)
         {
             SceneManager.LoadScene (3);
         }
