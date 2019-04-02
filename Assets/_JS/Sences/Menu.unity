@@ -742,7 +742,7 @@ GameObject:
   - component: {fileID: 1722851144}
   - component: {fileID: 1722851143}
   m_Layer: 8
-  m_Name: Bloom
+  m_Name: Post Process
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
