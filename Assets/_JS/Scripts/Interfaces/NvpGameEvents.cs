@@ -5,5 +5,8 @@ using UnityEngine;
 public enum NvpGameEvents 
 {
     OnDebugMsg,
-    OnMainStarted
+    OnMainStarted,
+    OnGameStarted,
+    OnPlayer1Wins,
+    OnPlayer2Wins
 }

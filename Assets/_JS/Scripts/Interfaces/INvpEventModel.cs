@@ -7,3 +7,4 @@ public interface INvpEventModel
     void InvokeEvent(NvpGameEvents e, object sender, object eventArgs);
     void Reset();
 }
+    

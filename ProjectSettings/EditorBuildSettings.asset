@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_JS/Sences/Option.unity
     guid: e93d00474116c37428f3512b95c6f4bc
+  - enabled: 1
+    path: Assets/_JS/Sences/Main.unity
+    guid: 646db9603cdbf9246a14298a73f26861
   m_configObjects: {}

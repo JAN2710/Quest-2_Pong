@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿    using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System;
@@ -16,6 +16,11 @@ public class NvpEventController : MonoBehaviour
 
     // +++ editor fields ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     public bool logGameEvents;
+
+    internal static void SubscribeToEvent(NvpGameEvents onPlayer1Wins)
+    {
+        throw new NotImplementedException();
+    }
 
 
 

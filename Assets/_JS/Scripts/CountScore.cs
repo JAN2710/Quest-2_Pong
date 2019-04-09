@@ -32,14 +32,16 @@ public class CountScore : MonoBehaviour
             Bat_2_Score ++;
         }
 
-        if (Bat_1_Score >= 7)
+        if (Bat_1_Score >= 2)
         {
-            SceneManager.LoadScene (2);
+            //SceneManager.LoadScene (2);
+            NvpEventController.InvokeEvent(NvpGameEvents.OnPlayer1Wins, this, null);
         }
 
-        if (Bat_2_Score >= 7)
+        if (Bat_2_Score >= 2)
         {
-            SceneManager.LoadScene (3);
+            //SceneManager.LoadScene(3);
+            NvpEventController.InvokeEvent(NvpGameEvents.OnPlayer2Wins, this, null);
         }
 
         Scoreboard.text = Bat_1_Score.ToString() + " - " + Bat_2_Score.ToString() ;
