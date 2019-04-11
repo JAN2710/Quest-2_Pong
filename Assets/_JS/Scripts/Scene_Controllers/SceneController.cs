@@ -14,6 +14,10 @@ public class SceneController : MonoBehaviour
         NvpEventController.SubscribeToEvent(NvpGameEvents.OnGameStarted, OnGameStarted);
         NvpEventController.SubscribeToEvent(NvpGameEvents.OnPlayer1Wins, OnPlayer1Wins);
         NvpEventController.SubscribeToEvent(NvpGameEvents.OnPlayer2Wins, OnPlayer2Wins);
+        NvpEventController.SubscribeToEvent(NvpGameEvents.OnResetGame, OnResetGame);
+        NvpEventController.SubscribeToEvent(NvpGameEvents.OnExitGame, OnExitGame);
+        NvpEventController.SubscribeToEvent(NvpGameEvents.OnOptionGame, OnOptionGame);
+        NvpEventController.SubscribeToEvent(NvpGameEvents.OnExitOption, OnExitOption);
     }
 
 
@@ -50,5 +54,25 @@ public class SceneController : MonoBehaviour
     {
         SceneManager.LoadScene(3, LoadSceneMode.Additive);
         SceneManager.UnloadSceneAsync(1);
+    }
+    private void OnResetGame(object sender, object eventrages)
+    {
+        SceneManager.LoadScene(1, LoadSceneMode.Additive);
+        SceneManager.UnloadSceneAsync(1);
+
+    }
+    private void OnExitGame(object sender, object eventrages)
+    {
+        SceneManager.LoadScene(0, LoadSceneMode.Additive);
+        SceneManager.UnloadSceneAsync(1);
+    }
+    private void OnOptionGame(object sender, object eventrage)
+    {
+        SceneManager.LoadScene(4, LoadSceneMode.Additive);
+        SceneManager.UnloadSceneAsync(0);
+    }
+    private void OnExitOption(object sender, object eventrage)
+    {
+        SceneManager.LoadScene(0, LoadSceneMode.Additive);
     }
 }      

@@ -8,5 +8,9 @@ public enum NvpGameEvents
     OnMainStarted,
     OnGameStarted,
     OnPlayer1Wins,
-    OnPlayer2Wins
+    OnPlayer2Wins,
+    OnResetGame,
+    OnExitGame,
+    OnOptionGame,
+    OnExitOption
 }

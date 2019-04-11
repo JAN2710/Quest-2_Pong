@@ -12,7 +12,6 @@ public class MenuController : MonoBehaviour
     public Button Option_Button;
     
 
-                
 
     public void Play_Game() 
     {
@@ -33,24 +32,31 @@ public class MenuController : MonoBehaviour
     }
 
     public void Reset_Game()
-    {   
-        SceneManager.LoadScene(1);
+    {
+        //SceneManager.LoadScene(1);
+        NvpEventController.InvokeEvent(NvpGameEvents.OnResetGame, this, null);
     }
 
     public void Exit_Game()
     {
-        SceneManager.LoadScene(0);
+        //SceneManager.LoadScene(0);
+        NvpEventController.InvokeEvent(NvpGameEvents.OnExitGame, this, null);
+
     }
 
     public void Option_Game()
     {
-        SceneManager.LoadScene(4);
+        //SceneManager.LoadScene(4);
+        NvpEventController.InvokeEvent(NvpGameEvents.OnOptionGame, this, null);
     }
-     
+
+    public void Exit_Option()
+    {
+        NvpEventController.InvokeEvent(NvpGameEvents.OnExitOption, this, null);
+    }
+
     public void Bloom_Off()
     {
-        //GameObject.Bloom = false;
-
         PlayerPrefs.SetInt("Bloom",0); 
     }
     
