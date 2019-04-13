@@ -6,6 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class SceneController : MonoBehaviour
 {
+    public AudioSource WinAudioScource;
+    public AudioClip Win;
+    public AudioSource BackgroundSMusicAudioScource;
+    public AudioClip Background;
+
     // +++ life cycle +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
     void Start()
     {
@@ -39,6 +44,7 @@ public class SceneController : MonoBehaviour
     {
         //if (SceneManager.GetSceneAt(0) == Scene.
         SceneManager.LoadScene(1, LoadSceneMode.Additive);
+        BackgroundSMusicAudioScource.PlayOneShot(Win);
         SceneManager.UnloadSceneAsync(0);
         SceneManager.UnloadSceneAsync(2);
         SceneManager.UnloadSceneAsync(3);
@@ -49,11 +55,13 @@ public class SceneController : MonoBehaviour
     {
         SceneManager.LoadScene(2, LoadSceneMode.Additive);
         SceneManager.UnloadSceneAsync(1);
+        WinAudioScource.PlayOneShot(Win);
     }
     private void OnPlayer2Wins(object sender, object eventrags)
     {
         SceneManager.LoadScene(3, LoadSceneMode.Additive);
         SceneManager.UnloadSceneAsync(1);
+        WinAudioScource.PlayOneShot(Win);
     }
     private void OnResetGame(object sender, object eventrages)
     {

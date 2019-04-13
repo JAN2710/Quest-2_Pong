@@ -12,6 +12,10 @@ public class BallMovement : MonoBehaviour
     public float speed_1 = 10f;
     public float speed_2 = 10f;
     public float acceleration = 2f;
+
+    public AudioSource ballAudioScource;
+    public AudioClip bleep;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -94,6 +98,25 @@ public class BallMovement : MonoBehaviour
             }
             acceleration += 0.2f;
         }
+        ballAudioScource.PlayOneShot(bleep);
 
     }
+
+    //void OnCollisionEnter2D(Collision2D collisionIn)
+    //{
+    //    ballAudioScource.PlayOneShot(bleep);
+    //}
+    //void Awake()
+    //{
+
+    //    source = GetComponent<Sound1>();
+    //}
+
+    //void OnCollisionEnter(Collision collisionInfo)
+    //{
+    //    if (collisionInfo.collider.tag == "Bat")
+    //    {
+    //        Debug.Log("Hallo");
+    //    }
+    //}
 }
