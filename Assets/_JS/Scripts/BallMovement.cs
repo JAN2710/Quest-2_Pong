@@ -68,7 +68,6 @@ public class BallMovement : MonoBehaviour
             if (Bat1.GetComponent<Rigidbody2D>().velocity.y > 0.5f)
             {
                 rb.velocity = new Vector2(speed_1 * acceleration, 15f);
-
             }
             else if (Bat1.GetComponent<Rigidbody2D>().velocity.y < -0.5f)
             {
@@ -82,7 +81,7 @@ public class BallMovement : MonoBehaviour
 
         }
 
-        if (hit.gameObject.name == "Bat_2")
+        if (hit.gameObject.name == "Bat_2_CPU")
         {
             if (Bat2.GetComponent<Rigidbody2D>().velocity.y > 0.5f)
             {
